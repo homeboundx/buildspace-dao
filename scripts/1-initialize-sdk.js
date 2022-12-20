@@ -9,7 +9,7 @@ if (!process.env.PRIVATE_KEY || process.env.PRIVATE_KEY === "") {
 }
 
 if (!process.env.QUICKNODE_API_URL || process.env.QUICKNODE_API_URL == "") {
-    console.log("Alchemy API URL not found");
+    console.log("Quicknode API URL not found");
 }
 
 if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
@@ -24,8 +24,8 @@ const sdk = new ThirdwebSDK(wallet);
     try {
         const address = await sdk.getSigner().getAddress();
         console.log("👋 SDK initialized by address:", address);
-    } catch (e) {
-        console.error("Failed to get apps from the SDK", err);
+    } catch (error) {
+        console.error("Failed to get apps from the SDK", error);
         process.exit(1);
     }
 })();

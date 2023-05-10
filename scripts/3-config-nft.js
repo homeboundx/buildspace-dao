@@ -7,8 +7,8 @@ const editionDrop = sdk.getEditionDrop('0x66916F4eB59c762eD10582e33dF94E3376bF74
     try {
         await editionDrop.createBatch([
             {
-                name: 'ThisDAO Membership',
-                description: 'This NFT grants you membership in ThisDAO',
+                name: 'DiplomaDAO Membership',
+                description: 'This NFT grants you membership in DiplomaDAO',
                 image: readFileSync('scripts/assets/DAOLogo.svg'),
             }
         ]);

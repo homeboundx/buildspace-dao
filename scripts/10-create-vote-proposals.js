@@ -3,10 +3,10 @@ import { ethers } from "ethers";
 
 (async () => {
   try {
-    const vote = await sdk.getContract("INSERT_VOTE_ADDRESS", "vote");
-    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
+    const vote = await sdk.getContract("0xcA77b5B6AE2EEd8E7DE7620d571a6271fE073F6c", "vote");
+    const token = await sdk.getContract("0xC7E49578F2BbD8Cfd9ed35F426051A080c59827C", "token");
     const amount = 420_000;
-    const description = "Should the DAO mint an additional " + amount + " tokens into the treasury?";
+    const description = "Должна ли ДАО произвести эмиссию " + amount + " токенов в пул?";
     const executions = [
       {
         toAddress: token.getAddress(),
@@ -29,11 +29,11 @@ import { ethers } from "ethers";
   }
 
   try {
-    const vote = await sdk.getContract("INSERT_VOTE_ADDRESS", "vote");
-    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
+    const vote = await sdk.getContract("0xcA77b5B6AE2EEd8E7DE7620d571a6271fE073F6c", "vote");
+    const token = await sdk.getContract("0xC7E49578F2BbD8Cfd9ed35F426051A080c59827C", "token");
     const amount = 6_900;
-    const description = "Should the DAO transfer " + amount + " tokens from the treasury to " +
-      process.env.WALLET_ADDRESS + " for being awesome?";
+    const description = "Должна ли ДАО перевести " + amount + " токенов из пула в " +
+      process.env.WALLET_ADDRESS + " за выдающиеся усилия по развитию ДАО?";
     const executions = [
       {
         nativeTokenValue: 0,

@@ -7,8 +7,8 @@ if (!process.env.PRIVATE_KEY || process.env.PRIVATE_KEY === "") {
   console.log("Private key not found.");
 }
 
-if (!process.env.QUICKNODE_API_URL || process.env.QUICKNODE_API_URL === "") {
-  console.log("QuickNode API URL not found.");
+if (!process.env.ALCHEMY_API_URL || process.env.ALCHEMY_API_URL === "") {
+  console.log("ALCHEMY API URL not found.");
 }
 
 if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
@@ -17,7 +17,7 @@ if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
 
 const sdk = ThirdwebSDK.fromPrivateKey(
   process.env.PRIVATE_KEY,
-  process.env.QUICKNODE_API_URL
+  process.env.ALCHEMY_API_URL
 );
 
 (async () => {

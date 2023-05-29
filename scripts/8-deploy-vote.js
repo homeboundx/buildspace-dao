@@ -5,7 +5,7 @@ import sdk from "./1-initialize-sdk.js";
     const voteContractAddress = await sdk.deployer.deployVote({
       name: "My Diploma DAO",
 
-      voting_token_address: "INSERT_TOKEN_ADDRESS",
+      voting_token_address: "0xC7E49578F2BbD8Cfd9ed35F426051A080c59827C",
 
       voting_delay_in_blocks: 0,
 
